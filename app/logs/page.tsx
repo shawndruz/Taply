@@ -25,7 +25,7 @@ const attendanceRecords: AttendanceRecord[] = [
     id: "1",
     employee: { name: "Marcus Chen" },
     time: "08:02 AM",
-    location: "HQ OFFICE",
+    location: "New York, NY",
     locationType: "office",
     status: "clock-in"
   },
@@ -33,7 +33,7 @@ const attendanceRecords: AttendanceRecord[] = [
     id: "2",
     employee: { name: "Sarah Jenkins" },
     time: "08:15 AM",
-    location: "NORTH HUB",
+    location: "Los Angeles, CA",
     locationType: "office",
     status: "clock-in"
   },
@@ -41,7 +41,7 @@ const attendanceRecords: AttendanceRecord[] = [
     id: "3",
     employee: { name: "David Kalu" },
     time: "04:45 PM",
-    location: "REMOTE",
+    location: "Remote - Toronto, ON",
     locationType: "remote",
     status: "clock-out"
   },
@@ -49,7 +49,23 @@ const attendanceRecords: AttendanceRecord[] = [
     id: "4",
     employee: { name: "Elena Rossi" },
     time: "09:12 AM",
-    location: "HQ OFFICE",
+    location: "Home - Boston, MA",
+    locationType: "office",
+    status: "clock-in"
+  },
+  {
+    id: "5",
+    employee: { name: "James Wilson" },
+    time: "10:30 AM",
+    location: "Seattle, WA",
+    locationType: "office",
+    status: "clock-in"
+  },
+  {
+    id: "6",
+    employee: { name: "Lisa Chen" },
+    time: "12:00 PM",
+    location: "San Francisco, CA",
     locationType: "office",
     status: "clock-in"
   },

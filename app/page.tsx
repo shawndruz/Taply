@@ -8,7 +8,8 @@ import { MetricCard } from "@/components/brutalist/metric-card"
 import { StatusBadge } from "@/components/brutalist/status-badge"
 import { TeamMapPreview } from "@/components/brutalist/team-map-preview"
 import { UserAvatar } from "@/components/brutalist/user-avatar"
-import { Clock, DollarSign, MapPin, Timer } from "lucide-react"
+import { NotificationBanner } from "@/components/brutalist/notification-banner"
+import { Clock, MapPin, Timer } from "lucide-react"
 import Link from "next/link"
 
 const teamMembers = [
@@ -74,6 +75,15 @@ export default function Dashboard() {
         </BrutalistCard>
       </div>
 
+      {/* Session Approval Notification */}
+      <div className="px-5 py-2">
+        <NotificationBanner 
+          type="pending"
+          message="Session Awaiting Approval"
+          details="Your biweekly report (Oct 14 - Oct 27) is pending supervisor approval"
+        />
+      </div>
+
       {/* Team Map */}
       <div className="px-5 py-4">
         <TeamMapPreview members={teamMembers} activeCount={8} />
@@ -81,19 +91,19 @@ export default function Dashboard() {
 
       {/* Metrics */}
       <div className="px-5 py-2">
-        <div className="grid grid-cols-2 gap-4">
-          <MetricCard
+        <div className="grid grid-cols-2 gap-3">
+          <MetricCard 
             icon={Clock}
             label="Week Hours"
             value="38.5h"
-            iconBgColor="bg-[#E0E7FF]"
+            color="bg-[#E0E7FF]"
             iconColor="text-[#6B21A8]"
           />
-          <MetricCard
-            icon={DollarSign}
-            label="Est. Earnings"
-            value="$1,240"
-            iconBgColor="bg-[#D1FAE5]"
+          <MetricCard 
+            icon={MapPin}
+            label="Current Location"
+            value="New York, NY"
+            color="bg-[#D1FAE5]"
             iconColor="text-[#059669]"
           />
         </div>
